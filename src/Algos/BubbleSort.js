@@ -4,8 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 const BubbleSort = () =>{
    const myState = useSelector(state => state.updateProps);
    const dispatch = useDispatch();
-
+   // values of array elements
    let values = myState.values.map((item) => item[0]);
+   // indexes of array elements
    let ids = myState.values.map((item) => item[1]);
    
    const solve = () => {
@@ -61,7 +62,8 @@ const BubbleSort = () =>{
          if(myState.play)
             solve();
       }
-   },[]);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+   },[myState.play]);
 
    return <></>;
 }
