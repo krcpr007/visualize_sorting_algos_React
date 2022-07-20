@@ -39,14 +39,14 @@ function Sidebar() {
          setBestCase("Ω(N2)")
          setSpace_Complexity("O(1)")
       }else if(algo==="quick"){
-         setBestCase("Ω(N log N)");
-         setAvgCase("Θ(N log N)")
+         setBestCase("Ω(N logN)");
+         setAvgCase("Θ(N logN)")
          setWorstCase("O(N2)");
          setSpace_Complexity("O(log(N))")
       }else if(algo==="heap"){
-         setBestCase("Ω(N log N)	");
-         setWorstCase("O(N log N)")
-         setAvgCase("Θ(N log N)")
+         setBestCase("Ω(N logN)	");
+         setWorstCase("O(N logN)")
+         setAvgCase("Θ(N logN)")
          setSpace_Complexity("O(1)")
       }
       dispatch({
@@ -131,7 +131,7 @@ function Sidebar() {
    }, []);
 
    return (
-      <div className="text-[#00ADB5] font-medium bg-[#393E46] ">
+      <div className="text-[#00ADB5] font-medium bg-[#393E46] md:h-screen">
 
          <div className="mb-2 ml-2 pt-1">
             <label htmlFor="algo">Algorithm: </label>
@@ -180,16 +180,16 @@ function Sidebar() {
             </select>
          </div>
          <div className="m-2">
-            <h1 className='text-center my-5'>Time Complexity</h1>
+            <h1 className='text-center my-5 text-[#EEEEEE]'>Time Complexity</h1>
             <label htmlFor="">Best Case:</label>
-            <p className='text-rose-500 inline mx-1'>{bestCase}</p><br />
+            <p className='text-rose-500 inline mx- p-1 md:p-0'>{bestCase}</p><br />
             <label htmlFor="">Average Case:</label>
-            <p className='text-rose-500 inline mx-1'>{avgCase}</p><br />
+            <p className='text-rose-500 inline mx-1 p-1 md:p-0'>{avgCase}</p><br />
             <label htmlFor="">Worst Case:</label>
-            <p className='text-rose-500 inline mx-1'>{worstCase}</p>
-            <h1 className='text-center my-5'>Space Complexity</h1>
+            <p className='text-rose-500 inline mx-1 p-1 md:p-0'>{worstCase}</p>
+            <h1 className='text-center my-5 text-[#EEEEEE]'>Space Complexity</h1>
             <label htmlFor="spc">Worst Case:</label>
-            <p id='spc' className='text-rose-500 inline mx-1'>{space_complexity}</p>
+            <p id='spc' className='text-rose-500 inline p-1 md:p-0'>{space_complexity}</p>
 
          </div>
       </div>
