@@ -10,7 +10,7 @@
     3. 📊Quick sort
     4. 📊Selection Sort
     5. 📊Insertion Sort 
-    6. 📊Heap Sort 
+    6. 📊Heap Sort ---> Not implemented yet⚠️
 
 
 ### You can also see the sorting algorithms time complexity and space complexity in all the cases  
