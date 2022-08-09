@@ -10,14 +10,14 @@ function Sidebar() {
    // space complexity of the algos...
    const [space_complexity, setSpace_Complexity] = useState("O(1)");
    // for dealing with time complexity of algos 
-   const [worstCase, setWorstCase] = useState("O(N2)");
-   const [avgCase, setAvgCase] = useState("Θ(N2)");
+   const [worstCase, setWorstCase] = useState("O(N^2)");
+   const [avgCase, setAvgCase] = useState("Θ(N^2)");
    const [bestCase, setBestCase] = useState("Ω(N)");
 
    const handleAlgo = (algo) => {
       if(algo==="bubble"){
-         setWorstCase("O(N2)");
-         setAvgCase("Θ(N2)");
+         setWorstCase("O(N^2)");
+         setAvgCase("Θ(N^2)");
          setBestCase("Ω(N)")
          setSpace_Complexity("O(1)")
       }
@@ -30,18 +30,18 @@ function Sidebar() {
       else if(algo==="insertion"){
          setSpace_Complexity("O(1)")
          setBestCase("Ω(N)")
-         setAvgCase("Θ(N2)"); 
-         setWorstCase("O(N2)")
+         setAvgCase("Θ(N^2)"); 
+         setWorstCase("O(N^2)")
       }
       else if(algo==="selection"){
-         setAvgCase("Θ(N2)"); 
-         setWorstCase("O(N2)")
-         setBestCase("Ω(N2)")
+         setAvgCase("Θ(N^2)"); 
+         setWorstCase("O(N^2)")
+         setBestCase("Ω(N^2)")
          setSpace_Complexity("O(1)")
       }else if(algo==="quick"){
          setBestCase("Ω(N logN)");
          setAvgCase("Θ(N logN)")
-         setWorstCase("O(N2)");
+         setWorstCase("O(N^2)");
          setSpace_Complexity("O(log(N))")
       }else if(algo==="heap"){
          setBestCase("Ω(N logN)	");
